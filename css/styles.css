@@ -295,6 +295,9 @@ a {
   margin: 0;
   padding: 0;
 }
+.addon-desc {
+  word-wrap: break-word;
+}
 .prod-details {
   margin-top: 20px;
   border: 1px solid #3293a8;
@@ -341,7 +344,7 @@ a {
   .product-description-section {
     box-sizing: border-box;
     padding: 5px;
-    margin-bottom: 18vh;
+    margin-bottom: 22vh;
   }
   .price-rating-container {
     flex-direction: column-reverse;
@@ -402,5 +405,8 @@ a {
     top: 0;
     left: 0;
     padding-bottom: 0;
+  }
+  .addon-details {
+    grid-template-columns: 1fr 2fr 1fr 1fr;
   }
 }
