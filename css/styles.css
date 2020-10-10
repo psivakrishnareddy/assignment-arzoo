@@ -296,7 +296,17 @@ a {
   margin: 0;
   padding-left: 10px;
 }
+.collapse-box {
+  background-color: white;
+  display: none;
+  transition: 0.6s;
+}
+.collapse-box.active {
+  display: block;
+}
+
 .prod-details .item {
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
