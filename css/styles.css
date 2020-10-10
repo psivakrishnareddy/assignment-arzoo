@@ -1,3 +1,4 @@
+/* --------common ------------*/
 * {
   /* margin: 0; */
   padding: 0;
@@ -10,10 +11,66 @@ body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
 a {
   text-decoration: none;
   color: #0066cc;
 }
+/* button css*/
+
+.round-button {
+  font-size: 18px;
+  margin-top: 10px;
+  border-radius: 20px;
+  width: 110px;
+  height: 40px;
+  border: 1px solid #0066cc;
+  color: #0066cc;
+  background-color: white;
+  outline: none;
+}
+
+.primary-btn {
+  width: 150px;
+  height: 40px;
+  color: #0066cc;
+  font-size: 18px;
+  border: 2px solid #0066cc;
+  border-radius: 3px;
+  background-color: white;
+  margin-right: -8px;
+  outline: none;
+  -webkit-tap-highlight-color: #ccc;
+  -moz-tap-highlight-color: #ccc;
+  /* border-right: none !important; */
+}
+.primary-btn:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #0066cc;
+}
+.secondary-btn {
+  width: 150px;
+  height: 40px;
+  color: white;
+  font-size: 18px;
+  outline: none;
+  border: 3px solid #0066cc;
+  border-radius: 3px;
+  background-color: #0066cc;
+  /* border-left: none !important; */
+}
+.secondary-btn:hover {
+  cursor: pointer;
+  color: #0066cc;
+  border: 2px solid #0066cc;
+  background-color: white;
+}
+
+/* Navbar-------------- */
 
 .nav-content {
   position: fixed;
@@ -80,6 +137,7 @@ a {
   color: #0066cc;
   cursor: pointer;
 }
+
 .product-main-container {
   display: grid;
   grid-template-columns: 2fr 3fr;
@@ -87,6 +145,7 @@ a {
   margin-top: 50px;
 }
 .product-gallary-section {
+  /* margin-top: 30px; */
   padding: 20px;
   border-right: 5px solid whitesmoke;
 }
@@ -101,19 +160,10 @@ a {
 }
 #photo-frame {
   width: -webkit-fill-available;
+  width: -moz-fill-available;
   height: auto;
 }
 
-.round-button {
-  font-size: 18px;
-  margin-top: 10px;
-  border-radius: 20px;
-  width: 110px;
-  height: 40px;
-  border: 1px solid #0066cc;
-  color: #0066cc;
-  background-color: white;
-}
 .product-carousel {
   /* background-color: khaki; */
   width: 100%;
@@ -142,21 +192,21 @@ a {
 .product-description-section {
   box-sizing: border-box;
   width: 100%;
+  max-height: 90vh;
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 150px;
-  /* overflow: scroll;
-  overflow-x: hidden; */
 }
-/* .product-description-section::-webkit-scrollbar {
-  width: 5px;
-} */
+::-webkit-scrollbar {
+  width: 8px;
+}
 .product-name {
   letter-spacing: 3px;
 }
 .price-rating-container {
   display: flex;
-  flex-grow: 1;
+  flex-shrink: inherit;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
@@ -171,42 +221,9 @@ a {
   padding-right: 10px;
 }
 
-.primary-btn {
-  width: 150px;
-  height: 40px;
-  color: #0066cc;
-  font-size: 18px;
-  border: 2px solid #0066cc;
-  border-radius: 3px;
-  background-color: white;
-  margin-right: -8px;
-  /* border-right: none !important; */
-}
-.primary-btn:hover {
-  cursor: pointer;
-  color: white;
-  background-color: #0066cc;
-}
-.secondary-btn {
-  width: 150px;
-  height: 40px;
-  color: white;
-  font-size: 18px;
-
-  border: 3px solid #0066cc;
-  border-radius: 3px;
-  background-color: #0066cc;
-  /* border-left: none !important; */
-}
-.secondary-btn:hover {
-  cursor: pointer;
-  color: #0066cc;
-  border: 2px solid #0066cc;
-  background-color: white;
-}
-.rating-container {
+/* .rating-container {
   padding-left: 150px;
-}
+} */
 .rating-container .checked {
   color: #0066cc;
 }
@@ -287,7 +304,7 @@ a {
   padding-right: 20px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
   .product-main-container {
     display: block;
   }
@@ -297,7 +314,7 @@ a {
   .product-description-section {
     box-sizing: border-box;
     padding: 5px;
-    margin-bottom: 8vh;
+    margin-bottom: 18vh;
   }
   .price-rating-container {
     flex-direction: column-reverse;
@@ -349,5 +366,11 @@ a {
   }
   #bars {
     display: none;
+  }
+  .product-name {
+    margin-top: 0;
+  }
+  .product-gallary-section {
+    padding-bottom: 0;
   }
 }
