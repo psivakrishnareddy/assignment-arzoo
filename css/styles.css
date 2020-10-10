@@ -147,7 +147,7 @@ a {
 }
 .product-gallary-section {
   position: sticky;
-  top: 100px;
+  top: 5em;
 
   padding: 20px;
   border-right: 5px solid whitesmoke;
@@ -306,7 +306,12 @@ a {
 .prod-details .item i {
   padding-right: 20px;
 }
-
+.image-item {
+  vertical-align: middle;
+  object-fit: scale-down;
+  width: 90px;
+  height: auto;
+}
 @media only screen and (max-width: 650px) {
   .product-main-container {
     display: block;
