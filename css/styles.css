@@ -10,6 +10,7 @@ body {
   background-color: white;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  /* position: relative; */
 }
 body::-webkit-scrollbar-thumb {
   background-color: darkgrey;
@@ -73,7 +74,7 @@ a {
 /* Navbar-------------- */
 
 .nav-content {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   background-color: white;
@@ -142,10 +143,12 @@ a {
   display: grid;
   grid-template-columns: 2fr 3fr;
   height: 100vh;
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 .product-gallary-section {
-  /* margin-top: 30px; */
+  position: sticky;
+  top: 100px;
+
   padding: 20px;
   border-right: 5px solid whitesmoke;
 }
@@ -352,7 +355,7 @@ a {
     z-index: 100;
   }
   .cart-buttons button {
-    height: 6vh;
+    height: 7vh;
     width: 50%;
   }
   .logo-section .logo h1 {
@@ -371,6 +374,9 @@ a {
     margin-top: 0;
   }
   .product-gallary-section {
+    position: relative;
+    top: 0;
+    left: 0;
     padding-bottom: 0;
   }
 }
