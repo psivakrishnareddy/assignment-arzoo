@@ -240,8 +240,8 @@ a {
 .offer-box {
   border: 1px solid gray;
   min-width: 55%;
-  width: fit-content;
-  /* width: 320px; */
+  /* width: fit-content(22em); */
+  width: 320px;
 
   height: auto;
   overflow: hidden;
