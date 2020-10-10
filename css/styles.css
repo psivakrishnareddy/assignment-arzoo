@@ -32,6 +32,11 @@ a {
   color: #0066cc;
   background-color: white;
   outline: none;
+  cursor: pointer;
+}
+.round-button:hover {
+  background-color: #328ce6;
+  color: white;
 }
 
 .primary-btn {
@@ -97,7 +102,9 @@ a {
 #arrow {
   display: none;
 }
-
+#bars:hover {
+  cursor: pointer;
+}
 .logo {
   color: #328ce6;
   margin-left: 20px;
